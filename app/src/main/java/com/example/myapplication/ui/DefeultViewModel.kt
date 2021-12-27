@@ -5,5 +5,5 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 abstract class DefeultViewModel:ViewModel() {
-    protected val mSnackBarText:MutableLiveData<>
+//    protected val mSnackBarText:MutableLiveData
 }

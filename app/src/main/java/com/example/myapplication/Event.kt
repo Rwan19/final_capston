@@ -1,4 +1,4 @@
-package com.example.myapplication
-
-open class Event<> {
-}
+//package com.example.myapplication
+//
+////open class Event<> {
+//}
