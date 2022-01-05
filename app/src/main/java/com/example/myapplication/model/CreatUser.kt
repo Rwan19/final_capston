@@ -1,7 +1,7 @@
-package com.fredrikbogg.android_chat_app.data.model
+package com.example.myapplication.model
 
-data class CreateUser(
+data class CreatUser (
     var displayName: String = "",
     var email: String = "",
     var password: String = ""
-)
+        )

@@ -1,9 +1,10 @@
 package com.example.myapplication
 
 import androidx.lifecycle.Observer
-import java.util.*
 
-open class Event<out T>(private val content :T) {
+
+open class ResponseStateEvent<out T>
+    (private val content :T) {
     private var isHandled= false
 
     fun getContentIfNotHandled():T?{
@@ -17,8 +18,8 @@ open class Event<out T>(private val content :T) {
 }
 
 
-class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Observer<Event<T>> {
-    override fun onChanged(event: Event<T>?) {
-        event?.getContentIfNotHandled()?.let { onEventUnhandledContent(it) }
+class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Observer<ResponseStateEvent<T>> {
+    override fun onChanged(responseStateEvent: ResponseStateEvent<T>?) {
+        responseStateEvent?.getContentIfNotHandled()?.let { onEventUnhandledContent(it) }
     }
 }

@@ -1,13 +1,14 @@
-package com.example.myapplication.database
+package com.example.myapplication.data.database
 
 
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.example.myapplication.Result
-import com.fredrikbogg.android_chat_app.data.model.CreateUser
-import com.fredrikbogg.android_chat_app.data.model.Login
+import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.model.CreatUser
+import com.example.myapplication.model.Login
+
 
 class FirebaseAuthStateObserver {
 
@@ -31,11 +32,11 @@ class FirebaseAuthSource {
         val authInstance = FirebaseAuth.getInstance()
     }
 
-    private fun attachAuthObserver(b: ((Result<FirebaseUser>) -> Unit)): FirebaseAuth.AuthStateListener {
+    private fun attachAuthObserver(b: ((ResponseStateResult<FirebaseUser>) -> Unit)): FirebaseAuth.AuthStateListener {
         return FirebaseAuth.AuthStateListener {
             if (it.currentUser == null) {
-                b.invoke(Result.Error("No user"))
-            } else { b.invoke(Result.Success(it.currentUser)) }
+                b.invoke(ResponseStateResult.Error("No user"))
+            } else { b.invoke(ResponseStateResult.Success(it.currentUser)) }
         }
     }
 
@@ -43,7 +44,7 @@ class FirebaseAuthSource {
         return authInstance.signInWithEmailAndPassword(login.email, login.password)
     }
 
-    fun createUser(createUser: CreateUser): Task<AuthResult> {
+    fun createUser(createUser: CreatUser): Task<AuthResult> {
         return authInstance.createUserWithEmailAndPassword(createUser.email, createUser.password)
     }
 
@@ -51,7 +52,7 @@ class FirebaseAuthSource {
         authInstance.signOut()
     }
 
-    fun attachAuthStateObserver(firebaseAuthStateObserver: FirebaseAuthStateObserver, b: ((Result<FirebaseUser>) -> Unit)) {
+    fun attachAuthStateObserver(firebaseAuthStateObserver: FirebaseAuthStateObserver, b: ((ResponseStateResult<FirebaseUser>) -> Unit)) {
         val listener = attachAuthObserver(b)
         firebaseAuthStateObserver.start(listener, authInstance)
     }

@@ -1,4 +1,4 @@
-package com.fredrikbogg.android_chat_app.data.model
+package com.example.myapplication.model
 
 data class Login(
     var email: String = "",

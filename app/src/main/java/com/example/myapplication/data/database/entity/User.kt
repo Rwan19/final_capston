@@ -1,7 +1,7 @@
-package com.example.myapplication
+package com.example.myapplication.data.database.entity
+
 
 import com.google.firebase.database.PropertyName
-
 
 data class User(
     @get:PropertyName("info") @set:PropertyName("info") var info: UserInfo = UserInfo(),
@@ -29,4 +29,5 @@ data class UserNotification(
 data class UserRequest(
     @get:PropertyName("userID") @set:PropertyName("userID") var userID: String = ""
 )
+
 

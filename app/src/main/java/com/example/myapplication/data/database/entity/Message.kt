@@ -1,8 +1,7 @@
-package com.example.myapplication
+package com.example.myapplication.data.database.entity
 
 import com.google.firebase.database.PropertyName
 import java.util.*
-
 
 data class Message(
     @get:PropertyName("senderID") @set:PropertyName("senderID") var senderID: String = "",

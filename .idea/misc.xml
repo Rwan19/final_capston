@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background_input_chat.xml" value="0.1675" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background_received_message.xml" value="0.1675" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background_sent_message.xml" value="0.1285" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_arrow_back_ios_24.xml" value="0.1285" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_chat_bubble_24.xml" value="0.1835" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.1835" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/circle_message.xml" value="0.126" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/circle_online.xml" value="0.1285" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/default_imge.xml" value="0.1205" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1205" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/ttttttttttttt.xml" value="0.1675" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout-v26/message_item_send.xml" value="0.1640625" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat_message.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chats.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_login.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_new_acount.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_regester.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_start.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_chat.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_user.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_recive.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_send.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/ttttttttttttt.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/menu/menu.xml" value="0.17864583333333334" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

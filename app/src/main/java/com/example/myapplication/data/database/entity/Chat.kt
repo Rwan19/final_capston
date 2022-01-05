@@ -1,10 +1,8 @@
-package com.example.myapplication
+package com.example.myapplication.data.repos
 
-import android.os.Message
 import com.google.firebase.database.PropertyName
-
-
-data class Chat(
+import com.example.myapplication.data.database.entity.Message
+data class Chat (
     @get:PropertyName("lastMessage") @set:PropertyName("lastMessage") var lastMessage: Message = Message(),
     @get:PropertyName("info") @set:PropertyName("info") var info: ChatInfo = ChatInfo()
 )
