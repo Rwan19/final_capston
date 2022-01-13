@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.App
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.database.FirebaseAuthStateObserver
 import com.example.myapplication.data.database.FirebaseReferenceConnectedObserver
 import com.example.myapplication.data.database.FirebaseReferenceValueObserver

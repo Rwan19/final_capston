@@ -13,5 +13,5 @@ fun View.forceHideKeyboard() {
 }
 
 fun View.showSnackBar(text: String) {
-    Snackbar.make(this.rootView.findViewById(R.id.container), text, Snackbar.LENGTH_SHORT).show()
+    Snackbar.make(this.rootView.findViewById(R.id.main_container), text, Snackbar.LENGTH_SHORT).show()
 }

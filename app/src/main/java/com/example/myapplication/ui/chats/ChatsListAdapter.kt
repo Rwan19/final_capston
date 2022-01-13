@@ -14,7 +14,7 @@ import com.example.myapplication.model.ChatWthUserInfo
 class ChatsListAdapter internal constructor(private val viewModel: ChatsViewModel) :
     ListAdapter<(ChatWthUserInfo), ChatsListAdapter.ViewHolder>(ChatDiffCallback()) {
 
-    class ViewHolder(private val binding: ListItemUserBinding) :
+    class ViewHolder(private val binding:ListItemUserBinding ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(viewModel: ChatsViewModel, item: ChatWthUserInfo) {
             binding.viewmodel = viewModel

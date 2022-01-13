@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.ResponseStateEvent
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 
 abstract class DefaultViewModel:ViewModel() {
     protected val mSnackBarText = MutableLiveData<ResponseStateEvent<String>>()

@@ -24,14 +24,16 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
+        android:background="@color/white1"
+        android:padding="2dp"
         android:clickable="true"
+
         android:focusable="true"
         android:onClick="@{() -> viewmodel.selectChatWithUserInfoPressed(chatwithuserinfo)}"
         app:bind_message="@{chatwithuserinfo.MChat.lastMessage}"
         app:bind_message_textView="@{messageText}"
         app:bind_message_view="@{notSeenView}"
-        app:bind_myUserID="@{viewmodel.myUserID}"
-       >
+        app:bind_myUserID="@{viewmodel.myUserID}">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageCardView"
@@ -50,9 +52,8 @@
                 android:layout_margin="0dp"
                 android:contentDescription="@string/user_image"
                 android:scaleType="centerCrop"
-                tools:src="@tools:sample/avatars[0]"
                 app:bind_image_url="@{chatwithuserinfo.MUserInfo.profileImageUrl}"
-                />
+                tools:src="@tools:sample/avatars[0]" />
 
         </androidx.cardview.widget.CardView>
 
@@ -60,10 +61,10 @@
             android:id="@+id/onlineView"
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:background="@drawable/circle_online"
+            android:background="@drawable/icons8_round_24"
+            android:visibility="@{chatwithuserinfo.MUserInfo.online == true? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintBottom_toBottomOf="@id/imageCardView"
             app:layout_constraintRight_toRightOf="@id/imageCardView"
-            android:visibility="@{chatwithuserinfo.MUserInfo.online == true? View.VISIBLE : View.INVISIBLE}"
             tools:visibility="visible" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,6 +73,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
+            android:background="@color/white1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/imageCardView"
             app:layout_constraintRight_toRightOf="parent"
@@ -83,25 +85,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textSize="18sp"
                 android:text="@{chatwithuserinfo.MUserInfo.displayName}"
+                android:textColor="#001523"
+                android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/timeText"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Display name" />
+                tools:text="@string/Display_name" />
 
             <TextView
                 android:id="@+id/messageText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
+                android:textColor="#001523"
                 android:textSize="14sp"
                 app:bind_chat_message_text="@{chatwithuserinfo.MChat.lastMessage}"
                 app:bind_chat_message_text_viewModel="@{viewmodel}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/notSeenLayout"
-                tools:text="Message"
+                tools:text="@string/Message"
                 tools:textAppearance="@style/MessageNotSeen" />
 
             <TextView

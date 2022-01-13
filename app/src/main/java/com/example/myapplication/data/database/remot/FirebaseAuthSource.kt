@@ -5,7 +5,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.model.CreatUser
 import com.example.myapplication.model.Login
 
@@ -32,7 +32,8 @@ class FirebaseAuthSource {
         val authInstance = FirebaseAuth.getInstance()
     }
 
-    private fun attachAuthObserver(b: ((ResponseStateResult<FirebaseUser>) -> Unit)): FirebaseAuth.AuthStateListener {
+    private fun attachAuthObserver(b: ((ResponseStateResult<FirebaseUser>) -> Unit)):
+            FirebaseAuth.AuthStateListener {
         return FirebaseAuth.AuthStateListener {
             if (it.currentUser == null) {
                 b.invoke(ResponseStateResult.Error("No user"))

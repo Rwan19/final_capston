@@ -1,8 +1,8 @@
 package com.example.myapplication.data.database
 
-import com.example.myapplication.*
 import com.example.myapplication.data.database.entity.*
 import com.example.myapplication.data.repos.*
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.util.wrapSnapshotToArrayList
 import com.example.myapplication.util.wrapSnapshotToClass
 import com.google.android.gms.tasks.Task
@@ -24,6 +24,7 @@ class FirebaseReferenceConnectedObserver {
 
     private fun getEventListener(userID: String): ValueEventListener {
         return (object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
                 val connected = snapshot.getValue(Boolean::class.java) ?: false
                 if (connected) {
@@ -107,7 +108,7 @@ class FirebaseDataSource {
         })
     }
 
-    private fun <T> attachValueListenerToBlock(resultClassName: Class<T>, b: ((ResponseStateResult<T>) -> Unit)): ValueEventListener {
+    private fun <T> attachValueListenerToBlock(resultClassName: Class<T>, b: (ResponseStateResult<T>) -> Unit): ValueEventListener {
         return (object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) { b.invoke(ResponseStateResult.Error(error.message)) }
 
@@ -120,15 +121,15 @@ class FirebaseDataSource {
             }
         })
     }
-//
-//    private fun <T> attachValueListenerToBlockWithList(resultClassName: Class<T>, b: ((Result<MutableList<T>>) -> Unit)): ValueEventListener {
-//        return (object : ValueEventListener {
-//            override fun onCancelled(error: DatabaseError) { b.invoke(Result.Error(error.message)) }
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                b.invoke(Result.Success(wrapSnapshotToArrayList(resultClassName, snapshot)))
-//            }
-//        })
-//    }
+
+    private fun <T> attachValueListenerToBlockWithList(resultClassName: Class<T>, b: ((ResponseStateResult<MutableList<T>>) -> Unit)): ValueEventListener {
+        return (object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) { b.invoke(ResponseStateResult.Error(error.message)) }
+            override fun onDataChange(snapshot: DataSnapshot) {
+                b.invoke(ResponseStateResult.Success(wrapSnapshotToArrayList(resultClassName, snapshot)))
+            }
+        })
+    }
 
     private fun <T> attachChildListenerToBlock(resultClassName: Class<T>, b: ((ResponseStateResult<T>) -> Unit)): ChildEventListener {
         return (object : ChildEventListener {
@@ -251,36 +252,36 @@ class FirebaseDataSource {
         return src.task
     }
 
-    //endregion
 
-    //region Value Observers
 
-    fun <T> attachUserObserver(resultClassName: Class<T>, userID: String, refObs: FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
+    fun <T> attachUserObserver(resultClassName: Class<T>, userID: String, refObs:
+    FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
         val listener = attachValueListenerToBlock(resultClassName, b)
         refObs.start(listener, refToPath("users/$userID"))
     }
 
-    fun <T> attachUserInfoObserver(resultClassName: Class<T>, userID: String, refObs: FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
+    fun <T> attachUserInfoObserver(resultClassName: Class<T>, userID: String, refObs:
+    FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
         val listener = attachValueListenerToBlock(resultClassName, b)
         refObs.start(listener, refToPath("users/$userID/info"))
     }
 
-    fun <T> attachUserNotificationsObserver(resultClassName: Class<T>, userID: String, firebaseReferenceValueObserver: FirebaseReferenceValueObserver,
-                                            b: ((ResponseStateResult<MutableList<T>>) -> Unit)
+    fun <T> attachUserNotificationsObserver(resultClassName: Class<T>, userID: String, firebaseReferenceValueObserver:
+    FirebaseReferenceValueObserver, b: ((ResponseStateResult<MutableList<T>>) -> Unit)
     ) {
-//        val listener = attachValueListenerToBlockWithList(resultClassName, b)
-//        firebaseReferenceValueObserver.start(listener, refToPath("users/$userID/notifications"))
+        val listener = attachValueListenerToBlockWithList(resultClassName, b)
+        firebaseReferenceValueObserver.start(listener, refToPath("users/$userID/notifications"))
     }
-
-    fun <T> attachMessagesObserver(resultClassName: Class<T>, messagesID: String, refObs: FirebaseReferenceChildObserver, b: ((ResponseStateResult<T>) -> Unit)) {
+    fun <T> attachMessagesObserver(resultClassName: Class<T>, messagesID: String, refObs:
+    FirebaseReferenceChildObserver, b: ((ResponseStateResult<T>) -> Unit)) {
         val listener = attachChildListenerToBlock(resultClassName, b)
         refObs.start(listener, refToPath("messages/$messagesID"))
     }
 
-    fun <T> attachChatObserver(resultClassName: Class<T>, chatID: String, refObs: FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
+    fun <T> attachChatObserver(resultClassName: Class<T>, chatID: String, refObs:
+    FirebaseReferenceValueObserver, b: ((ResponseStateResult<T>) -> Unit)) {
         val listener = attachValueListenerToBlock(resultClassName, b)
         refObs.start(listener, refToPath("chats/$chatID"))
     }
 
-    //endregion
 }

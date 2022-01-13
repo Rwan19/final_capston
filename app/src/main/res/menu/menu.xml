@@ -2,13 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_chats"
-        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/icons8_chat_message_48"
         android:title="@string/chats" />
 
 
+
     <item
-        android:id="@+id/navigation_settings"
-        android:icon="@drawable/ic_baseline_settings_24"
+        android:id="@+id/notificationFragment"
+        android:icon="@drawable/icons8_notification_30"
+        android:title="@string/notification"/>
+    <item
+        android:id="@+id/userFragment"
+        android:icon="@drawable/icons8_account_48"
+        android:title="@string/user"/>
+
+    <item
+        android:id="@+id/sittingsFragment"
+        android:icon="@drawable/icons8_settings_24"
         android:title="@string/settings" />
+
 </menu>

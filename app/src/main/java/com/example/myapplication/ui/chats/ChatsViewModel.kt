@@ -11,6 +11,7 @@ import com.example.myapplication.data.database.entity.UserInfo
 import com.example.myapplication.data.repos.Chat
 import com.example.myapplication.data.repos.DatabaseRepo
 import com.example.myapplication.model.ChatWthUserInfo
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.util.addNewItem
 import com.example.myapplication.util.updateItemAt
 import com.example.myapplication.util.convertTwoUserIDs

@@ -1,7 +1,7 @@
 package com.example.myapplication.ui.chat
 
 import androidx.lifecycle.*
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
 import com.example.myapplication.data.database.FirebaseReferenceChildObserver
 import com.example.myapplication.data.database.FirebaseReferenceValueObserver

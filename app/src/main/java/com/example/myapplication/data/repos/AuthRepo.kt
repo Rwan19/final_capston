@@ -3,7 +3,7 @@ package com.example.myapplication.data.repos
 import android.util.Log
 import com.example.myapplication.data.database.FirebaseAuthSource
 import com.example.myapplication.data.database.FirebaseAuthStateObserver
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.model.CreatUser
 import com.example.myapplication.model.Login
 import com.google.firebase.auth.FirebaseUser

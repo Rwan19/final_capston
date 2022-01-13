@@ -3,10 +3,9 @@ package com.example.myapplication.ui.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.ResponseStateEvent
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
 import com.example.myapplication.data.repos.AuthRepo
-import com.example.myapplication.data.repos.DatabaseRepo
 import com.example.myapplication.model.Login
 import com.example.myapplication.util.isEmailValid
 import com.example.myapplication.util.isTextValid
@@ -38,6 +37,7 @@ class LoginViewModel:DefaultViewModel() {
             mSnackBarText.value = ResponseStateEvent("Invalid email format")
             return
         }
+
         if (!isTextValid(6, passwordText.value)) {
             mSnackBarText.value = ResponseStateEvent("Password is too short")
             return

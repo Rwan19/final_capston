@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.sittings.SittingsFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.myapplication.ui.sittings.SettingsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/userImageCardView"
+            android:layout_width="145dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="-50dp"
+            android:layout_marginBottom="176dp"
+            app:cardCornerRadius="60dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintBottom_toTopOf="@+id/changeImageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="158dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:bind_image_url="@{viewmodel.userInfo.profileImageUrl}"
+                tools:src="@tools:sample/avatars" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/nameText"
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:text="@{viewmodel.userInfo.displayName}"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userImageCardView"
+            tools:text="@string/Name" />
+
+        <TextView
+            android:id="@+id/statusText"
+            style="@style/MessageSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxLength="40"
+            android:singleLine="true"
+            android:text="@{viewmodel.userInfo.status}"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.426"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameText"
+            tools:text="@string/status" />
+
+        <Button
+            android:id="@+id/changeImageButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/violet"
+            android:onClick="@{() -> viewmodel.changeUserImagePressed()}"
+            android:text="@string/change_image"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/changeStatusButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.219"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/changeStatusButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginBottom="44dp"
+            android:backgroundTint="@color/violet"
+            android:onClick="@{() -> viewmodel.changeUserStatusPressed()}"
+            android:text="@string/change_status"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            style="@style/VeryBoldText"
+            android:layout_width="164dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="146dp"
+            android:layout_marginEnd="146dp"
+            android:layout_marginBottom="132dp"
+            android:backgroundTint="@color/violet"
+            android:drawableLeft="@drawable/icons8_sign_out_48"
+            android:onClick="@{() -> viewmodel.logoutUserPressed()}"
+            android:text="@string/logout"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.ResponseStateEvent
-import com.example.myapplication.ResponseStateResult
+import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
 import com.example.myapplication.data.database.entity.User
 import com.example.myapplication.data.repos.AuthRepo
@@ -30,6 +30,7 @@ class RegisterViewModel:DefaultViewModel() {
     val passwordText = MutableLiveData<String>()
     val isCreatingAccount = MutableLiveData<Boolean>()
 
+
     private fun createAccount() {
         isCreatingAccount.value = true
         val createUser = CreatUser(displayNameText.value!!, emailText.value!!, passwordText.value!!)
@@ -40,7 +41,7 @@ class RegisterViewModel:DefaultViewModel() {
             Log.d(TAG, "createAccount: $responseStateResult")
             if (responseStateResult is ResponseStateResult.Success) {
                 mIsCreatedResponseStateEvent.value = ResponseStateEvent(responseStateResult.data!!)
-                dbRepository.updateNameUser(User().apply {
+                dbRepository.updateNewUser(User().apply {
                     info.id = responseStateResult.data.uid
                     info.displayName = createUser.displayName
                     Log.d(TAG,"from reg $this")

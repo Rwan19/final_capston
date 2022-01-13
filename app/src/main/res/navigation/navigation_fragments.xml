@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_fragments"
-    app:startDestination="@id/mainActivity3">
+    app:startDestination="@id/startFragment2">
     <fragment
         android:id="@+id/regesterFragment"
         android:name="com.example.myapplication.ui.regestration.RegesterFragment"
-        android:label="RegesterFragment" >
+        android:label="RegesterFragment"
+        tools:layout="@layout/fragment_regester">
         <action
             android:id="@+id/from_regester_to_chats"
             app:destination="@id/chatFragment" />
@@ -15,7 +16,8 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.myapplication.ui.login.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/from_login_to_chats"
             app:destination="@id/chatFragment" />
@@ -23,7 +25,8 @@
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.myapplication.ui.chats.ChatFragment"
-        android:label="ChatFragment" >
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chats">
         <action
             android:id="@+id/from_chats_to_chatMessage"
             app:destination="@id/chatMessageFragment" />
@@ -31,26 +34,51 @@
     <fragment
         android:id="@+id/chatMessageFragment"
         android:name="com.example.myapplication.ui.chat.ChatMessageFragment"
-        android:label="ChatMessageFragment" />
-    <activity
-        android:id="@+id/mainActivity3"
-        android:name="com.example.myapplication.ui.main.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        android:label="ChatMessageFragment"
+        />
     <fragment
         android:id="@+id/startFragment2"
-        android:name="com.example.myapplication.ui.StartFragment"
-        android:label="StartFragment" >
+        android:name="com.example.myapplication.ui.start.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
         <action
-            android:id="@+id/from_setting_to_regester"
+            android:id="@+id/from_start_to_regester"
             app:destination="@id/regesterFragment" />
         <action
-            android:id="@+id/from_setting_to_chat"
+            android:id="@+id/from_start_to_login"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/from_setting_to_login"
+            android:id="@+id/from_start_to_chat"
             app:launchSingleTop="true"
             app:destination="@id/chatFragment"
             app:popUpTo="@id/startFragment2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ui.profil.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.myapplication.ui.user.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.myapplication.ui.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification"/>
+    <fragment
+        android:id="@+id/sittingsFragment"
+        android:name="com.example.myapplication.ui.sittings.SittingsFragment"
+        android:label="fragment_sittings"
+        tools:layout="@layout/fragment_sittings" >
+        <action
+            android:id="@+id/action_sittingsFragment_to_startFragment2"
+            app:destination="@id/startFragment2" />
     </fragment>
 </navigation>

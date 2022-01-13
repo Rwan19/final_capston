@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.start
 
 import android.provider.ContactsContract
 import androidx.lifecycle.LiveData

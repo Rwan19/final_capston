@@ -41,6 +41,7 @@ class ChatFragment : Fragment() {
         setupObservers()
     }
 
+
     private fun setupListAdapter() {
         val viewModel = viewDataBinding.viewmodel
         if (viewModel != null) {

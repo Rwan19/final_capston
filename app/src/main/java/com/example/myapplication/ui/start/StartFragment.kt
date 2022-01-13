@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.start
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -27,7 +27,6 @@ class StartFragment : Fragment() {
         return viewDataBinding.root
     }
 
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         setupObservers()
@@ -48,15 +47,15 @@ class StartFragment : Fragment() {
     }
 
     private fun navigateDirectlyToChats() {
-        findNavController().navigate(R.id.from_setting_to_chat)
+        findNavController().navigate(R.id.from_start_to_chat)
     }
 
     private fun navigateToLogin() {
-        findNavController().navigate(R.id.from_setting_to_login)
+        findNavController().navigate(R.id.from_start_to_login)
     }
 
     private fun navigateToCreateAccount() {
-        findNavController().navigate(R.id.from_setting_to_regester)
+        findNavController().navigate(R.id.from_start_to_regester)
     }
 
 

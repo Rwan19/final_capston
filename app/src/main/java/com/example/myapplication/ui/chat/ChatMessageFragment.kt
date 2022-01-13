@@ -3,11 +3,15 @@ package com.example.myapplication.ui.chat
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentChatBinding
+import com.example.myapplication.databinding.ToolbarChatBinding
 import kotlinx.android.synthetic.main.fragment_chat.*
 
 private const val TAG = "ChatMessageFragment"
@@ -32,8 +36,12 @@ class ChatMessageFragment : Fragment() {
     private lateinit var viewDataBinding: FragmentChatBinding
     private lateinit var listAdapter: MessageListAdapter
     private lateinit var listAdapterObserver: RecyclerView.AdapterDataObserver
-//    private lateinit var toolbarAddonChatBinding: ToolbarAddonChatBinding
+    private lateinit var toolbarAddonChatBinding: ToolbarChatBinding
 
+    override fun onDestroy() {
+        super.onDestroy()
+        removeCustomToolbar()
+    }
 
 
 
@@ -47,29 +55,42 @@ class ChatMessageFragment : Fragment() {
         viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
         setHasOptionsMenu(true)
 
-//        toolbarAddonChatBinding =
-//            ToolbarAddonChatBinding.inflate(inflater, container, false)
-//                .apply { viewmodel = viewModel }
-//        toolbarAddonChatBinding.lifecycleOwner = this.viewLifecycleOwner
+        toolbarAddonChatBinding =
+           ToolbarChatBinding.inflate(inflater, container, false)
+                .apply { viewmodel = viewModel }
+        toolbarAddonChatBinding.lifecycleOwner = this.viewLifecycleOwner
 
         return viewDataBinding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupCustomToolbar()
         setupListAdapter()
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            android.R.id.home -> {
-//                findNavController().popBackStack()
-//                return true
-//            }
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                findNavController().popBackStack()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun removeCustomToolbar() {
+        val supportActionBar = (activity as AppCompatActivity?)!!.supportActionBar
+        supportActionBar!!.setDisplayShowCustomEnabled(false)
+        supportActionBar.customView = null
+    }
+
+    private fun setupCustomToolbar() {
+        val supportActionBar = (activity as AppCompatActivity?)!!.supportActionBar
+        supportActionBar!!.setDisplayShowCustomEnabled(true)
+        supportActionBar.customView = toolbarAddonChatBinding.root
+    }
     private fun setupListAdapter() {
         val viewModel = viewDataBinding.viewmodel
         if (viewModel != null) {

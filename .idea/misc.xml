@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/madod/.gradle/caches/transforms-3/ac1faa25c2c90da7e9cdbd018257d97d/transformed/appcompat-1.4.0/res/layout/support_simple_spinner_dropdown_item.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background_input_chat.xml" value="0.1675" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/background_received_message.xml" value="0.1675" />
@@ -19,19 +20,26 @@
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat_message.xml" value="0.11005434782608696" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chats.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chats.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_new_acount.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_notification.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_regester.xml" value="0.22" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_start.xml" value="0.11005434782608696" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user.xml" value="0.11005434782608696" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_chat.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_user.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_sittings.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_start.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_chat.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_notification.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_user.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_recive.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_send.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/toolbar.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/toolbar_chat.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/ttttttttttttt.xml" value="0.1118659420289855" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/menu/menu.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/xml/networksecurity_config.xml" value="0.46568627450980393" />
       </map>
     </option>
   </component>

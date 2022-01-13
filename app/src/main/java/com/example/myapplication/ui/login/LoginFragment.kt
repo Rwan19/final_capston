@@ -3,6 +3,7 @@ package com.example.myapplication.ui.login
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
@@ -28,6 +29,22 @@ class LoginFragment : Fragment() {
         return viewDataBinding.root
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        setupObservers()
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                findNavController().popBackStack()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun setupObservers() {
         viewModel.dataLoading.observe(viewLifecycleOwner,
             EventObserver { (activity as MainActivity).showGlobalProgressBar(it) })
@@ -39,7 +56,7 @@ class LoginFragment : Fragment() {
             })
         viewModel.isLoged.observe(viewLifecycleOwner, EventObserver {
             SharedPreferencesUtil.saveUserID(requireContext(), it.uid)
-
+            navigateToChats()
         })
     }
 

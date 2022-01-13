@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.response
 
 
 sealed class ResponseStateResult<out R> {

@@ -1,22 +1,44 @@
 <resources>
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="type_a_message"></string>
-    <string name="user_image"></string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="Register">Register</string>
-    <string name="create_a_new_account">Create New Account</string>
-    <string name="display_name">Username</string>
-    <string name="create">Create</string>
-    <string name="register">Regester</string>
-    <string name="username">Username</string>
-    <string name="welcome_to_quick_chat">welcom</string>
-    <string name="login">login</string>
-    <string name="create_account">Creat Account</string>
-    <string name="login_or_create_an_account_to_get_started">Login or Creat New Account to start</string>
-    <string name="chats">Chats</string>
-    <string name="settings">Settings</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="type_a_message" translatable="false"></string>
+    <string name="user_image" translatable="false"></string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+
+    <string name="Register" translatable="false">Register</string>
+    <string name="create_a_new_account" translatable="false">Create New Account</string>
+    <string name="display_name" translatable="false">Username</string>
+    <string name="create" translatable="false">Create</string>
+    <string name="register" translatable="false">Regester</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="welcome_to_quick_chat" translatable="false">welcom</string>
+    <string name="login" translatable="false">login</string>
+    <string name="Sign_Up" translatable="false">Signup</string>
+    <string name="login_or_create_an_account_to_get_started" translatable="false">Login or Creat New Account to start</string>
+    <string name="chats" translatable="false">Chats</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="add_friend" translatable="false">add friend</string>
+    <string name="remove_friend" translatable="false">remove Friend</string>
+    <string name="request_sent" translatable="false">request sent</string>
+    <string name="accept_friend_request" translatable="false">accept friend request</string>
+    <string name="decline_friend_request" translatable="false">decline friend request</string>
+    <string name="accept" translatable="false">Accept</string>
+    <string name="decline" translatable="false">Decline</string>
+    <string name="new_friend_request" translatable="false">new friend request</string>
+    <string name="change_image" translatable="false">change Img</string>
+    <string name="change_status" translatable="false">change status</string>
+    <string name="logout" translatable="false">log out</string>
+    <string name="Display_name" translatable="false">Display name</string>Message
+    <string name="Message" translatable="false">Message</string>
+    <string name="status" translatable="false">status</string>
+    <string name="Name" translatable="false">Name</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="french" translatable="false">French</string>
+    <string name="english" translatable="false">English</string>
+    <string name="languag" translatable="false">Languag</string>
+    <string name="notification" translatable="false">Notification</string>
+    <string name="user" translatable="false">User</string>
+
 </resources>

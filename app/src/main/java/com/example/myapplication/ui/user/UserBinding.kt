@@ -9,3 +9,4 @@ import com.example.myapplication.data.database.entity.User
 fun bindUsersList(listView: RecyclerView, items: List<User>?) {
     items?.let { (listView.adapter as UsersListAdapter).submitList(items) }
 }
+

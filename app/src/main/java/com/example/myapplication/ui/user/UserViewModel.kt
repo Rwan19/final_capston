@@ -2,16 +2,14 @@ package com.example.myapplication.ui.user
 
 import androidx.lifecycle.*
 import com.example.myapplication.ResponseStateEvent
-import com.example.myapplication.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
 import com.example.myapplication.data.database.entity.User
 import com.example.myapplication.data.repos.DatabaseRepo
+import com.example.myapplication.response.ResponseStateResult
 
 
 class UsersViewModelFactory(private val myUserID: String) :
     ViewModelProvider.Factory {
-
-
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return UsersViewModel(myUserID) as T
     }
@@ -33,7 +31,7 @@ class UsersViewModel(private val myUserID: String) : DefaultViewModel() {
     }
 
     private fun loadUsers() {
-        repository.loadUser { result: ResponseStateResult<MutableList<User>> ->
+        repository.loadUsers { result: ResponseStateResult<MutableList<User>> ->
             onResult(updatedUsersList, result)
         }
     }

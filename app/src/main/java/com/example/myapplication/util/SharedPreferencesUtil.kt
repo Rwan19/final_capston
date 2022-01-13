@@ -2,6 +2,7 @@ package com.example.myapplication.util
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.myapplication.ui.sittings.SittingsFragment
 
 object SharedPreferencesUtil {
     private const val PACKAGE_NAME = "com.myapplication.android_chat_app"
@@ -22,4 +23,6 @@ object SharedPreferencesUtil {
     fun removeUserID(context: Context) {
         getPrefs(context).edit().remove(KEY_USER_ID).apply()
     }
+
+
 }
