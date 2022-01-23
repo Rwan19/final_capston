@@ -6,7 +6,9 @@
     <string name="user_image" translatable="false"></string>
     <string name="email" translatable="false">Email</string>
     <string name="password" translatable="false">Password</string>
-
+    <string name="notifiction_channel_name" translatable="false"> Notificaton Channel Name</string>
+    <string name="title_notification" translatable="false">Chat App</string>
+    <string name="descriptin_notification" translatable="false">welcome, you can register now</string>
     <string name="Register" translatable="false">Register</string>
     <string name="create_a_new_account" translatable="false">Create New Account</string>
     <string name="display_name" translatable="false">Username</string>
@@ -40,5 +42,6 @@
     <string name="languag" translatable="false">Languag</string>
     <string name="notification" translatable="false">Notification</string>
     <string name="user" translatable="false">User</string>
+    <string name="enter_message" translatable="false">Enter message</string>
 
 </resources>

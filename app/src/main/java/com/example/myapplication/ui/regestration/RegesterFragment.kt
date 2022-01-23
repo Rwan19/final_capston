@@ -1,5 +1,9 @@
 package com.example.myapplication.ui.regestration
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,6 +11,10 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.*
@@ -20,6 +28,9 @@ class RegesterFragment : Fragment() {
 
     private val viewModel by viewModels<RegisterViewModel>()
     private lateinit var viewDataBinding: FragmentRegesterBinding
+    private val CHANNEL_ID="channel_id"
+    private var resources= R.string.notifiction_channel_name.toString()
+
 
 
 
@@ -33,11 +44,48 @@ class RegesterFragment : Fragment() {
         setHasOptionsMenu(true)
         Log.d(TAG, "onCreateView: ")
         return viewDataBinding.root
+
+
     }
 
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun showNotification(context:Context) {
+
+        val mChannelName=resources
+        val mChannelDescription="Channel Description"
+        val mChannelImportance= NotificationManager.IMPORTANCE_DEFAULT
+        val channel= NotificationChannel(CHANNEL_ID,mChannelName, mChannelImportance).toString()
+
+        val notificationManager= getSystemService(context, NotificationManager::class.java)
+
+        val builder =context.let {
+            NotificationCompat.Builder(context.applicationContext ,channel)
+                .setTicker("")
+                .setSmallIcon(R.drawable.circle_online)
+                .setContentTitle("textTitle")
+                .setContentText("textContent")
+                .setAutoCancel(true)
+        }
+
+
+        val notificationChannel= NotificationChannel(channel,"signup notification",
+            NotificationManager.IMPORTANCE_DEFAULT)
+        notificationManager?.createNotificationChannel(notificationChannel)
+        builder.setChannelId(channel)
+
+        val notification = builder.build()
+        notificationManager?.notify(100,notification)
+
+    }
+
+
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         setupObservers()
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

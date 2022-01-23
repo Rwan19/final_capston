@@ -23,28 +23,16 @@
         >
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="409dp"
-            android:layout_height="183dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="2dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/userImageCardView"
             android:layout_width="148dp"
             android:layout_height="132dp"
+            android:layout_marginTop="128dp"
             app:cardCornerRadius="60dp"
             app:cardPreventCornerOverlap="true"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@android:color/white"
             app:strokeWidth="2dp">
 
@@ -62,14 +50,14 @@
             style="@style/BoldText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:background="@color/white1"
+            android:layout_marginTop="36dp"
+            android:background="#00F8F9FA"
             android:gravity="center"
             android:text="@{viewmodel.otherUser.info.displayName}"
-            android:textSize="36sp"
             android:textColor="@color/blueText"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.469"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userImageCardView"
             tools:text="@string/Name" />
@@ -79,71 +67,77 @@
             style="@style/MessageSeen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@color/white1"
+            android:layout_marginTop="16dp"
+            android:background="#00F8F9FA"
             android:maxLength="40"
             android:singleLine="true"
             android:text="@{viewmodel.otherUser.info.status}"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nameText"
             tools:text="Status" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/statesLayout"
-            android:layout_width="318dp"
-            android:layout_height="143dp"
-            android:layout_marginBottom="84dp"
+            android:layout_width="229dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="192dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.612"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusText"
+            app:layout_constraintVertical_bias="0.73">
 
             <Button
                 android:id="@+id/removeFriendButton"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@color/violet"
+                android:layout_width="152dp"
+                android:layout_height="56dp"
+                android:background="@drawable/inner_buttom"
                 android:onClick="@{() -> viewmodel.removeFriendPressed()}"
                 android:text="@string/remove_friend"
                 android:textSize="16sp"
                 android:visibility="@{viewmodel.layoutState == viewmodel.layoutState.IS_FRIEND? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="gone" />
 
             <Button
                 android:id="@+id/requestSentButton"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@color/violet"
+                android:layout_width="152dp"
+                android:layout_height="56dp"
+                android:background="@drawable/inner_buttom"
                 android:enabled="false"
                 android:text="@string/request_sent"
                 android:textSize="16sp"
                 android:visibility="@{viewmodel.layoutState == viewmodel.layoutState.REQUEST_SENT? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="gone" />
 
             <Button
                 android:id="@+id/acceptRequestButton"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@color/violet"
+                android:layout_width="152dp"
+                android:layout_height="56dp"
+                android:background="@drawable/inner_buttom"
                 android:onClick="@{() -> viewmodel.acceptFriendRequestPressed()}"
                 android:text="@string/accept_friend_request"
                 android:textSize="16sp"
                 android:visibility="@{viewmodel.layoutState == viewmodel.layoutState.ACCEPT_DECLINE? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="gone" />
 
             <Button
                 android:id="@+id/declineRequestButton"
-                android:layout_width="92dp"
-                android:layout_height="34dp"
+                android:layout_width="152dp"
+                android:layout_height="56dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="318dp"
-                android:background="@color/violet"
+                android:background="@drawable/inner_buttom"
                 android:onClick="@{() -> viewmodel.declineFriendRequestPressed()}"
                 android:text="@string/decline_friend_request"
                 android:textSize="16sp"
@@ -155,17 +149,16 @@
 
             <Button
                 android:id="@+id/addFriendButton"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_marginStart="79dp"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="103dp"
-
+                android:layout_width="152dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/buttom"
                 android:onClick="@{() -> viewmodel.addFriendPressed()}"
                 android:text="@string/add_friend"
                 android:textSize="16sp"
                 android:visibility="@{viewmodel.layoutState == viewmodel.layoutState.NOT_FRIEND? View.VISIBLE : View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.406"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="visible" />

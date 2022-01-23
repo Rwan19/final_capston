@@ -15,7 +15,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="#0089C2D9"
         android:minHeight="?attr/actionBarSize"
         tools:layout_height="?attr/actionBarSize">
 
@@ -70,8 +70,11 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
             android:layout_toEndOf="@id/imageContentLayout"
+            android:background="#0089C2D9"
             android:orientation="vertical">
 
             <TextView

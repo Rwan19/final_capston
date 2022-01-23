@@ -1,7 +1,15 @@
 package com.example.myapplication.ui.login
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.myapplication.R
 import com.example.myapplication.ResponseStateEvent
 import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
@@ -32,6 +40,8 @@ class LoginViewModel:DefaultViewModel() {
             if (result is ResponseStateResult.Success || result is ResponseStateResult.Error) isLoggingIn.value = false
         }
     }
+
+
     fun loginPressed() {
         if (!isEmailValid(emailText.value.toString())) {
             mSnackBarText.value = ResponseStateEvent("Invalid email format")

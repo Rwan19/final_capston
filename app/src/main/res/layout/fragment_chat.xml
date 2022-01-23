@@ -22,41 +22,28 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="542dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="7dp"
-        android:background="@color/white1"
-        android:backgroundTint="@color/white1"
+        android:layout_height="814dp"
+        android:layout_marginTop="16dp"
+        android:background="#00F8F9FA"
+        android:backgroundTint="#00F8F9FA"
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        android:padding="20dp"
         app:bind_disable_item_animator="@{true}"
         app:bind_messages_list="@{viewmodel.messagesList}"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/message_item_recive" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-android:progressDrawable="@drawable/icons8_progress_indicator_48"
-        android:layout_marginBottom="256dp"
-        app:layout_constraintBottom_toBottomOf="@+id/chatRecyclerView"
-        app:layout_constraintEnd_toEndOf="@+id/chatRecyclerView"
-        app:layout_constraintStart_toStartOf="@+id/chatRecyclerView" />
 
     <FrameLayout
         android:id="@+id/layoutSend"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent">
@@ -64,42 +51,51 @@ android:progressDrawable="@drawable/icons8_progress_indicator_48"
     </FrameLayout>
 
 
-    <EditText
-        android:id="@+id/inputMessage"
-        android:layout_width="299dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/white1"
-        android:hint="@string/type_a_message"
-        android:imeOptions="actionDone"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:text="@={viewmodel.newMessageText}"
-        android:textColor="@color/blueText"
-        android:textColorHint="@android:color/secondary_text_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/send_masagebtn"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/send_masagebtn"
-        android:layout_width="60dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/white1"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="@{() -> viewmodel.sendMessagePressed()}"
-        android:padding="8dp"
-        android:src="@drawable/icons8_sent_24"
-        android:tint="@color/black"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/inputMessage" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="306dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/send_message"
+            android:hint="@string/enter_message"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@={viewmodel.newMessageText}"
+            android:textColor="@color/blueText"
+            android:textColorHint="@android:color/secondary_text_dark" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/send_masagebtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/send_buttom"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewmodel.sendMessagePressed()}"
+            android:padding="8dp"
+            android:src="@drawable/icons8_sent_24"
+            android:tint="@color/black" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

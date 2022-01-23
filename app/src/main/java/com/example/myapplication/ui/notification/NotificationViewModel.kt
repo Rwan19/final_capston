@@ -49,7 +49,7 @@ class NotificationsViewModel(private val myUserID: String) : DefaultViewModel() 
         }
     }
 
-    private fun updateNotification(otherUserInfo: UserInfo, removeOnly: Boolean) {
+     private fun updateNotification(otherUserInfo: UserInfo, removeOnly: Boolean) {
         val userNotification = userNotificationsList.value?.find {
             it.userID == otherUserInfo.id
         }

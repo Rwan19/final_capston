@@ -1,5 +1,6 @@
 package com.example.myapplication.data
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,6 +8,7 @@ import com.example.myapplication.ResponseStateEvent
 import com.example.myapplication.response.ResponseStateResult
 
 abstract class DefaultViewModel:ViewModel() {
+
     protected val mSnackBarText = MutableLiveData<ResponseStateEvent<String>>()
     val snackBarText: LiveData<ResponseStateEvent<String>> = mSnackBarText
 

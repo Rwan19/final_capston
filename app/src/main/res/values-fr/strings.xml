@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Mon application</string>
+    <string name="email" translatable="false">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="Register">Nouveau compte</string>
+    <string name="create_a_new_account">Nouveau compte</string>
+    <string name="display_name">Nom dutilisateur</string>
+    <string name="create">Créer</string>
+    <string name="register">Nouveau compte</string>
+    <string name="username">Nom dutilisateur</string>
+    <string name="welcome_to_quick_chat">Bienvenue</string>
+    <string name="login">Connexion</string>
+    <string name="Sign_Up">Nouvelle inscription</string>
+    <string name="chats" translatable="false">conversation</string>
+    <string name="settings">Paramètres</string>
+    <string name="add_friend">Ajouter un ami</string>
+    <string name="remove_friend">Supprimer un ami</string>
+    <string name="request_sent">Envoyer une invitation</string>
+    <string name="accept_friend_request">Accepter un nouvel ami</string>
+    <string name="decline_friend_request">Refuser lajout dun ami</string>
+    <string name="accept">accepter</string>
+    <string name="decline">Refuser</string>
+    <string name="new_friend_request">Demander un nouvel ami</string>
+    <string name="change_image">modifier limage</string>
+    <string name="change_status">Changer létat</string>
+    <string name="logout">Déconnexion</string>
+    <string name="Message">Message</string>
+    <string name="status">Statut</string>
+    <string name="Display_name" translatable="false">Nom dutilisateur</string>
+    <string name="Name">Nom</string>
+    <string name="arabic">Arabe</string>
+    <string name="french">Français</string>
+    <string name="english">"Anglais"</string>
+    <string name="languag">Langue</string>
+    <string name="notification">Notifications</string>
+    <string name="user" translatable="false">Utilisateur</string>
 </resources>

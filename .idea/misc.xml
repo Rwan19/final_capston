@@ -11,34 +11,46 @@
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_arrow_back_ios_24.xml" value="0.1285" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_chat_bubble_24.xml" value="0.1835" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.1835" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.133" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/buttom.xml" value="0.1115" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/circle_message.xml" value="0.126" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/circle_online.xml" value="0.1285" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/default_imge.xml" value="0.1205" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1205" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/inner_buttom.xml" value="0.1115" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/notification_icon.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/resicl.xml" value="0.119" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/send_buttom.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/send_message.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/sent_message.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/ttttttttttttt.xml" value="0.1675" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout-v26/message_item_send.xml" value="0.1640625" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chat_message.xml" value="0.11005434782608696" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_chats.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_new_acount.xml" value="0.1" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_notification.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_profile.xml" value="0.17721518987341772" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_regester.xml" value="0.22" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_sittings.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_sittings.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_start.xml" value="0.22" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user.xml" value="0.13333333333333333" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_chat.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_notification.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_user2.xml" value="0.1218469431380932" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/img_item_send.xml" value="0.12612227447627192" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_chat.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_notification.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/list_item_user.xml" value="0.22" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item.xml" value="0.1" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_recive.xml" value="0.22" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_recive.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/message_item_send.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/toolbar.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/toolbar_chat.xml" value="0.1" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/toolbar_chat.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/ttttttttttttt.xml" value="0.1118659420289855" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/menu/menu.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.115" />
         <entry key="..\:/Users/madod/AndroidStudioProjects/MyApplication5/app/src/main/res/xml/networksecurity_config.xml" value="0.46568627450980393" />
       </map>
     </option>

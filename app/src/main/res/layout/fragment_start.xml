@@ -18,35 +18,39 @@
         android:background="@color/white"
         >
 
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/BoldText"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="248dp"
-            android:gravity="center_horizontal"
-            android:text="@string/welcome_to_quick_chat"
-            android:textColor="@color/blueText"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="239dp"
+            android:layout_height="219dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="68dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hugo_222" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="137dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:srcCompat="@drawable/business_3d_icon_24" />
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="260dp"
             android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/buttom"
             android:drawableLeft="@drawable/icons8_signin_48"
             android:onClick="@{() -> viewmodel.goToLoginPressed()}"
             android:text="@string/login"
             android:textSize="16sp"
-            android:backgroundTint="@color/violet"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/guideline50" />
 
@@ -54,18 +58,16 @@
             android:id="@+id/sign_up"
             android:layout_width="260dp"
             android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:backgroundTint="@color/violet"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttom"
             android:drawableLeft="@drawable/icons8_sign_up_48"
             android:onClick="@{() -> viewmodel.goToCreateAccountPressed()}"
             android:text="@string/Sign_Up"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginButton" />
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline50"
@@ -90,8 +92,8 @@
         <TextView
             android:id="@+id/textView"
             style="@style/BoldText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="261dp"
+            android:layout_height="27dp"
             android:layout_marginTop="20dp"
             android:alpha=".8"
             android:gravity="center"
@@ -99,9 +101,11 @@
             android:textColor="@color/blueText"
             android:textSize="16sp"
             android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sign_up" />
+            app:layout_constraintTop_toBottomOf="@id/sign_up"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -10,16 +10,6 @@ import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
-//import jp.wasabeef.picasso.transformations.BlurTransformation
-
-//
-//@BindingAdapter("bind_image_url_blur")
-//fun bindBlurImageWithPicasso(imageView: ImageView, url: String?) {
-//    if (!url.isNullOrBlank()) {
-//        Picasso.get().load(url).error(R.drawable.default_imge)
-//            .transform(BlurTrans(imageView.context, 15, 1)).into(imageView)
-//    }
-//}
 
 @BindingAdapter("bind_image_url")
 fun bindImageWithPicasso(imageView: ImageView, url: String?) {

@@ -1,6 +1,10 @@
 package com.example.myapplication.ui.chat
 
+import android.content.Intent
+import android.net.Uri
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.lifecycle.*
+import com.example.myapplication.ResponseStateEvent
 import com.example.myapplication.response.ResponseStateResult
 import com.example.myapplication.data.DefaultViewModel
 import com.example.myapplication.data.database.FirebaseReferenceChildObserver
@@ -9,6 +13,7 @@ import com.example.myapplication.data.database.entity.Message
 import com.example.myapplication.data.database.entity.UserInfo
 import com.example.myapplication.data.repos.Chat
 import com.example.myapplication.data.repos.DatabaseRepo
+import com.example.myapplication.data.repos.StorageRepo
 import com.example.myapplication.util.addNewItem
 
 
@@ -23,6 +28,7 @@ class ChatViewModelFactory(private val myUserID: String, private val otherUserID
 class ChatViewModel(private val myUserID: String, private val otherUserID: String, private val chatID: String) : DefaultViewModel() {
 
     private val dbRepository: DatabaseRepo = DatabaseRepo()
+
 
     private val _otherUser: MutableLiveData<UserInfo> = MutableLiveData()
     private val _addedMessage = MutableLiveData<Message>()
@@ -72,6 +78,10 @@ class ChatViewModel(private val myUserID: String, private val otherUserID: Strin
         }
     }
 
+
+
+
+
     private fun loadAndObserveNewMessages() {
         messagesList.addSource(_addedMessage) { messagesList.addNewItem(it) }
 
@@ -82,6 +92,8 @@ class ChatViewModel(private val myUserID: String, private val otherUserID: Strin
             onResult(_addedMessage, result)
         }
     }
+
+
 
     fun sendMessagePressed() {
         if (!newMessageText.value.isNullOrBlank()) {

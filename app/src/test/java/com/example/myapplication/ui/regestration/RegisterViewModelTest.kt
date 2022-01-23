@@ -1,32 +1,17 @@
 package com.example.myapplication.ui.regestration
 
-import org.junit.Assert.*
+import com.example.myapplication.util.isTextValid
+import com.google.common.truth.Truth.assertThat
 
 import org.junit.Test
 
 class RegisterViewModelTest {
 
-    @Test
-    fun isCreatedResponseStateEvent() {
-    }
-
-    @Test
-    fun getDisplayNameText() {
-    }
-
-    @Test
-    fun getEmailText() {
-    }
-
-    @Test
-    fun getPasswordText() {
-    }
-
-    @Test
-    fun isCreatingAccount() {
-    }
 
     @Test
     fun createAccountPressed() {
+      val result= (!isTextValid(2, "ra"))&&(!isTextValid(6, "333"))
+        assertThat(result).isFalse()
+
     }
 }

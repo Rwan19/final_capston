@@ -21,11 +21,11 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@color/white1"
+        android:background="@drawable/resicl"
         android:clickable="true"
         android:focusable="true"
         android:onClick="@{() -> viewmodel.selectUser(user)}"
-        android:padding="2dp">
+        android:padding="4dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageCardView"

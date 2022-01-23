@@ -19,6 +19,10 @@ class DatabaseRepo {
     fun updateNewMessage(messagesID: String, message: Message) {
         firebaseDatabaseService.pushNewMessage(messagesID, message)
     }
+//
+//    fun updateNewImg(messagesID: String, message: Message) {
+//        firebaseDatabaseService.pushNewImg(messagesID, message)
+//    }
 
     fun updateNewUser(user: User) {
         firebaseDatabaseService.updateNewUser(user)

@@ -7,9 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.WorkRequest
 import com.example.myapplication.EventObserver
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentStartBinding
+import com.example.myapplication.util.MyWorker
 import com.example.myapplication.util.SharedPreferencesUtil
 
 class StartFragment : Fragment() {
@@ -35,6 +39,8 @@ class StartFragment : Fragment() {
             navigateDirectlyToChats()
         }
     }
+
+
 
     private fun userIsAlreadyLoggedIn(): Boolean {
         return SharedPreferencesUtil.getUserID(requireContext()) != null

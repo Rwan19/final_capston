@@ -6,16 +6,20 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.constraintlayout.widget.ConstraintSet.VISIBLE
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.work.*
 import com.example.myapplication.R
 import com.example.myapplication.data.database.FirebaseDataSource
 import com.example.myapplication.forceHideKeyboard
+import com.example.myapplication.util.MyWorker
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainProgressBar: ProgressBar
     private lateinit var notificationsBadge: BadgeDrawable
 
-//    private lateinit var mainToolbar: Toolbar
+
     private val viewModel: MainViewModel by viewModels()
 
 
@@ -33,12 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         navView = findViewById(R.id.nav_btn)
         mainProgressBar = findViewById(R.id.progressBar)
-//        mainToolbar = findViewById(R.id.main_toolbar)
+
 
         notificationsBadge =
             navView.getOrCreateBadge(R.id.notificationFragment).apply { isVisible = false }
 
-//        setSupportActionBar(mainToolbar)
 
         val navController = findNavController(R.id.fragmentContainerView)
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -70,6 +73,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        simpleWork()
+        myWorkManager()
             }
 
             override fun onPause() {
@@ -84,6 +89,34 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+private fun myWorkManager(){
+    val constraint=Constraints.Builder()
+        .setRequiresCharging(false)
+        .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+        .setRequiresCharging(false)
+        .setRequiresBatteryNotLow(true)
+        .build()
+
+    val myRequest=PeriodicWorkRequest.Builder(
+        MyWorker::class.java,
+        15,
+        TimeUnit.MINUTES
+    ).setConstraints(constraint)
+        .build()
+
+    WorkManager.getInstance(this)
+        .enqueueUniquePeriodicWork(
+            "my_id",
+            ExistingPeriodicWorkPolicy.KEEP,
+            myRequest
+        )
+}
+    private fun simpleWork(){
+        val mRequest: WorkRequest = OneTimeWorkRequestBuilder<MyWorker>()
+            .build()
+
+        WorkManager.getInstance(this).enqueue(mRequest)
+    }
 
 private fun setupViewModelObservers() {
     viewModel.userNotificationsList.observe(this) {

@@ -187,6 +187,11 @@ class FirebaseDataSource {
     }
 
 
+//    fun pushNewImg(messagesID: String, message: Message) {
+//        refToPath("messages/$messagesID").push().setValue(message)
+//    }
+
+
 
     fun removeNotification(userID: String, notificationID: String) {
         refToPath("users/${userID}/notifications/$notificationID").setValue(null)
